@@ -29,7 +29,6 @@
         .glow-card { position: relative; overflow: hidden; transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
         .glow-card:hover { transform: translateY(-4px); border-color: rgba(56, 189, 248, 0.4); box-shadow: 0 20px 40px -15px rgba(56, 189, 248, 0.15); }
         
-        /* Ambient Mouse Glow Effect */
         #cursor-glow {
             pointer-events: none;
             position: fixed;
@@ -44,7 +43,6 @@
 </head>
 <body class="selection:bg-sky-500 selection:text-white">
 
-    <!-- Interactive Cursor Glow -->
     <div id="cursor-glow"></div>
 
     <!-- Navigation Header -->
@@ -55,9 +53,10 @@
         <nav class="hidden md:flex space-x-12 text-xs tracking-[0.2em] uppercase font-medium text-slate-400">
             <a href="#about" class="hover:text-white transition-colors duration-200">About</a>
             <a href="#services" class="hover:text-white transition-colors duration-200">Expertise</a>
+            <a href="#stack" class="hover:text-white transition-colors duration-200">Tech Stack</a>
             <a href="#contact" class="hover:text-white transition-colors duration-200">Contact</a>
         </nav>
-        <a href="mailto:bantorresbusiness@gmail.com" class="text-xs uppercase tracking-widest border border-white/20 px-6 py-2.5 rounded-full hover:bg-white hover:text-darkBg transition-all duration-300 font-semibold">
+        <a href="#contact" class="text-xs uppercase tracking-widest border border-white/20 px-6 py-2.5 rounded-full hover:bg-white hover:text-darkBg transition-all duration-300 font-semibold">
             Inquire
         </a>
     </header>
@@ -67,9 +66,9 @@
         <div class="absolute inset-0 z-0 opacity-30 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-sky-950/60 via-darkBg to-darkBg"></div>
         
         <div class="relative z-20 max-w-5xl mx-auto space-y-8">
-            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-sky-500/30 bg-sky-500/10 text-sky-400 text-xs uppercase tracking-[0.25em] font-medium shadow-sm">
-                <span class="w-1.5 h-1.5 rounded-full bg-sky-400 animate-pulse"></span>
-                B2B Data & Automation Specialist
+            <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full border border-sky-500/30 bg-sky-500/10 text-sky-400 text-xs uppercase tracking-[0.25em] font-medium shadow-sm">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                Available for B2B Projects &amp; Pipelines
             </div>
             
             <h1 class="editorial-title text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-[1.1] text-white">
@@ -117,7 +116,6 @@
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <!-- Service 1 -->
             <div class="glass-panel glow-card p-10 rounded-2xl space-y-6">
                 <div class="text-sky-400 font-mono text-xs tracking-widest">01 / EXTRACTION</div>
                 <h3 class="editorial-title text-2xl font-semibold text-white">Google Maps Scraper</h3>
@@ -126,7 +124,6 @@
                 </p>
             </div>
 
-            <!-- Service 2 -->
             <div class="glass-panel glow-card p-10 rounded-2xl space-y-6">
                 <div class="text-sky-400 font-mono text-xs tracking-widest">02 / REFINEMENT</div>
                 <h3 class="editorial-title text-2xl font-semibold text-white">Data Enrichment</h3>
@@ -135,7 +132,6 @@
                 </p>
             </div>
 
-            <!-- Service 3 -->
             <div class="glass-panel glow-card p-10 rounded-2xl space-y-6">
                 <div class="text-sky-400 font-mono text-xs tracking-widest">03 / AUTOMATION</div>
                 <h3 class="editorial-title text-2xl font-semibold text-white">AI Outbound Hooks</h3>
@@ -146,23 +142,51 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="py-28 px-6 max-w-4xl mx-auto text-center">
-        <div class="glass-panel p-12 md:p-16 rounded-3xl space-y-8 border border-white/10 shadow-2xl">
-            <span class="text-xs uppercase tracking-[0.25em] text-sky-400 font-semibold">Initiate Collaboration</span>
-            <h2 class="editorial-title text-3xl md:text-5xl font-bold text-white">Ready to Upgrade Your Outbound Pipeline?</h2>
-            <p class="text-slate-400 max-w-xl mx-auto text-sm font-light leading-relaxed">
-                Direct inquiries for custom lead lists, scraper setups, and pipeline automation.
-            </p>
+    <!-- Tech Stack Section (New in Part 2) -->
+    <section id="stack" class="py-20 px-6 max-w-5xl mx-auto">
+        <div class="glass-panel p-10 rounded-3xl space-y-8 text-center border border-white/10">
+            <span class="text-xs uppercase tracking-[0.25em] text-sky-400 font-semibold">Operational Stack</span>
+            <h2 class="editorial-title text-2xl md:text-3xl font-bold text-white">Powered by Modern Tools</h2>
+            <div class="flex flex-wrap justify-center gap-4 pt-2">
+                <span class="px-5 py-2.5 rounded-xl bg-white/5 border border-white/10 text-xs font-mono tracking-wider text-slate-300">Python / Scrapers</span>
+                <span class="px-5 py-2.5 rounded-xl bg-white/5 border border-white/10 text-xs font-mono tracking-wider text-slate-300">Google Maps API</span>
+                <span class="px-5 py-2.5 rounded-xl bg-white/5 border border-white/10 text-xs font-mono tracking-wider text-slate-300">LLM Enrichment</span>
+                <span class="px-5 py-2.5 rounded-xl bg-white/5 border border-white/10 text-xs font-mono tracking-wider text-slate-300">CSV / CRM Pipelines</span>
+                <span class="px-5 py-2.5 rounded-xl bg-white/5 border border-white/10 text-xs font-mono tracking-wider text-slate-300">Git / Terminal</span>
+            </div>
+        </div>
+    </section>
 
-            <div class="flex flex-col sm:flex-row justify-center items-center gap-6 pt-4 text-sm font-medium">
-                <a href="mailto:bantorresbusiness@gmail.com" class="flex items-center gap-3 px-6 py-3.5 rounded-xl bg-white/5 border border-white/10 hover:border-sky-400 transition-all duration-300">
+    <!-- Contact & Lead Form Section -->
+    <section id="contact" class="py-28 px-6 max-w-4xl mx-auto">
+        <div class="glass-panel p-10 md:p-16 rounded-3xl space-y-8 border border-white/10 shadow-2xl">
+            <div class="text-center space-y-3">
+                <span class="text-xs uppercase tracking-[0.25em] text-sky-400 font-semibold">Initiate Collaboration</span>
+                <h2 class="editorial-title text-3xl md:text-4xl font-bold text-white">Ready to Upgrade Your Outbound Pipeline?</h2>
+                <p class="text-slate-400 text-sm font-light">Direct inquiries or message me directly below.</p>
+            </div>
+
+            <!-- Direct Contact Info Badges -->
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-5 text-sm font-medium">
+                <a href="mailto:bantorresbusiness@gmail.com" class="flex items-center gap-3 px-6 py-3.5 rounded-xl bg-white/5 border border-white/10 hover:border-sky-400 transition-all duration-300 text-slate-300">
                     <span class="text-sky-400">📧</span> bantorresbusiness@gmail.com
                 </a>
-                <a href="tel:7866729254" class="flex items-center gap-3 px-6 py-3.5 rounded-xl bg-white/5 border border-white/10 hover:border-sky-400 transition-all duration-300">
+                <a href="tel:7866729254" class="flex items-center gap-3 px-6 py-3.5 rounded-xl bg-white/5 border border-white/10 hover:border-sky-400 transition-all duration-300 text-slate-300">
                     <span class="text-sky-400">📞</span> 786-672-9254
                 </a>
             </div>
+
+            <!-- Lead Capture Form (Links straight to your email) -->
+            <form action="mailto:bantorresbusiness@gmail.com" method="POST" enctype="text/plain" class="space-y-4 pt-6 border-t border-white/10">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <input type="text" name="name" placeholder="Your Name / Company" required class="w-full bg-darkBg border border-white/10 rounded-xl px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-sky-400 transition">
+                    <input type="email" name="email" placeholder="Your Email Address" required class="w-full bg-darkBg border border-white/10 rounded-xl px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-sky-400 transition">
+                </div>
+                <textarea name="message" rows="4" placeholder="Tell me about your lead gen or data automation needs..." required class="w-full bg-darkBg border border-white/10 rounded-xl px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-sky-400 transition"></textarea>
+                <button type="submit" class="w-full py-4 bg-sky-500 text-darkBg font-semibold text-xs uppercase tracking-[0.2em] rounded-xl hover:bg-sky-400 transition-all shadow-lg shadow-sky-500/20">
+                    Send Inquiry
+                </button>
+            </form>
         </div>
     </section>
 
@@ -171,7 +195,6 @@
         &copy; 2026 Eli Torres. All Rights Reserved.
     </footer>
 
-    <!-- Mouse Tracking Script -->
     <script>
         const glow = document.getElementById('cursor-glow');
         window.addEventListener('mousemove', (e) => {

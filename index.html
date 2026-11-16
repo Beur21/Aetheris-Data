@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eli Torres | B2B Data & Automation Specialist</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
@@ -15,111 +15,168 @@
                         sans: ['Inter', 'sans-serif'],
                     },
                     colors: {
-                        darkBg: '#080c14',
-                        cardBg: '#0f172a',
-                        accentGold: '#d4af37',
+                        darkBg: '#05080f',
+                        cardBg: '#0b1120',
                     }
                 }
             }
         }
     </script>
     <style>
-        body { background-color: #080c14; color: #f8fafc; font-family: 'Inter', sans-serif; overflow-x: hidden; }
+        body { background-color: #05080f; color: #f8fafc; font-family: 'Inter', sans-serif; overflow-x: hidden; }
         .editorial-title { font-family: 'Cinzel', serif; }
-        .glass-panel { background: rgba(15, 23, 42, 0.7); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.08); }
-        .glow-effect:hover { box-shadow: 0 0 30px rgba(56, 189, 248, 0.15); border-color: rgba(56, 189, 248, 0.4); }
+        .glass-panel { background: rgba(11, 17, 32, 0.75); backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.08); }
+        .glow-card { position: relative; overflow: hidden; transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
+        .glow-card:hover { transform: translateY(-4px); border-color: rgba(56, 189, 248, 0.4); box-shadow: 0 20px 40px -15px rgba(56, 189, 248, 0.15); }
+        
+        /* Ambient Mouse Glow Effect */
+        #cursor-glow {
+            pointer-events: none;
+            position: fixed;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(56, 189, 248, 0.07) 0%, rgba(0, 0, 0, 0) 70%);
+            transition: transform 0.1s ease-out;
+            z-index: 10;
+            transform: translate(-50%, -50%);
+        }
     </style>
 </head>
 <body class="selection:bg-sky-500 selection:text-white">
 
-    <header class="fixed top-0 left-0 w-full z-50 glass-panel border-b border-white/5 px-8 py-5 flex justify-between items-center">
+    <!-- Interactive Cursor Glow -->
+    <div id="cursor-glow"></div>
+
+    <!-- Navigation Header -->
+    <header class="fixed top-0 left-0 w-full z-50 glass-panel border-b border-white/5 px-8 py-5 flex justify-between items-center transition-all duration-300">
         <div class="editorial-title text-xl font-bold tracking-widest text-white">
             EL<span class="text-sky-400">I</span> TORRES
         </div>
-        <nav class="hidden md:flex space-x-10 text-xs tracking-widest uppercase font-medium text-slate-400">
-            <a href="#about" class="hover:text-white transition">About</a>
-            <a href="#services" class="hover:text-white transition">Expertise</a>
-            <a href="#contact" class="hover:text-white transition">Contact</a>
+        <nav class="hidden md:flex space-x-12 text-xs tracking-[0.2em] uppercase font-medium text-slate-400">
+            <a href="#about" class="hover:text-white transition-colors duration-200">About</a>
+            <a href="#services" class="hover:text-white transition-colors duration-200">Expertise</a>
+            <a href="#contact" class="hover:text-white transition-colors duration-200">Contact</a>
         </nav>
-        <a href="mailto:bantorresbusiness@gmail.com" class="text-xs uppercase tracking-widest border border-white/20 px-5 py-2.5 rounded-full hover:bg-white hover:text-darkBg transition font-semibold">
+        <a href="mailto:bantorresbusiness@gmail.com" class="text-xs uppercase tracking-widest border border-white/20 px-6 py-2.5 rounded-full hover:bg-white hover:text-darkBg transition-all duration-300 font-semibold">
             Inquire
         </a>
     </header>
 
-    <section class="relative min-h-screen flex items-center justify-center px-6 pt-24 pb-16">
-        <div class="absolute inset-0 z-0 opacity-20 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-sky-900 via-darkBg to-darkBg"></div>
-        <div class="relative z-10 max-w-4xl text-center space-y-8">
-            <div class="inline-block px-4 py-1.5 rounded-full border border-sky-500/30 bg-sky-500/10 text-sky-400 text-xs uppercase tracking-widest font-semibold">
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex flex-col items-center justify-center px-6 pt-24 pb-16 text-center">
+        <div class="absolute inset-0 z-0 opacity-30 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-sky-950/60 via-darkBg to-darkBg"></div>
+        
+        <div class="relative z-20 max-w-5xl mx-auto space-y-8">
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-sky-500/30 bg-sky-500/10 text-sky-400 text-xs uppercase tracking-[0.25em] font-medium shadow-sm">
+                <span class="w-1.5 h-1.5 rounded-full bg-sky-400 animate-pulse"></span>
                 B2B Data & Automation Specialist
             </div>
-            <h1 class="editorial-title text-5xl md:text-7xl font-bold tracking-tight leading-tight text-white">
+            
+            <h1 class="editorial-title text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-[1.1] text-white">
                 Precision Data <span class="italic font-normal text-slate-400">&amp;</span> Pipeline Architecture
             </h1>
-            <p class="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto font-light leading-relaxed">
+            
+            <p class="text-base md:text-xl text-slate-400 max-w-2xl mx-auto font-light leading-relaxed tracking-wide">
                 Empowering sales teams and agencies with clean, verified B2B lead generation, advanced Google Maps scraping, and custom AI enrichment workflows.
             </p>
-            <div class="flex flex-col sm:flex-row justify-center items-center gap-4 pt-4">
-                <a href="#services" class="w-full sm:w-auto px-8 py-4 bg-sky-500 text-darkBg font-semibold rounded-full hover:bg-sky-400 transition shadow-lg shadow-sky-500/20">
+
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-5 pt-6">
+                <a href="#services" class="w-full sm:w-auto px-8 py-4 bg-sky-500 text-darkBg font-semibold text-sm tracking-wider uppercase rounded-full hover:bg-sky-400 transition-all duration-300 shadow-xl shadow-sky-500/20">
                     Explore Services
                 </a>
-                <a href="#contact" class="w-full sm:w-auto px-8 py-4 border border-white/20 text-white font-semibold rounded-full hover:bg-white/10 transition">
+                <a href="#contact" class="w-full sm:w-auto px-8 py-4 border border-white/20 text-white font-semibold text-sm tracking-wider uppercase rounded-full hover:bg-white/10 transition-all duration-300">
                     Get in Touch
                 </a>
             </div>
         </div>
     </section>
 
+    <!-- About Section -->
+    <section id="about" class="relative py-32 px-6 max-w-5xl mx-auto">
+        <div class="glass-panel p-10 md:p-16 rounded-3xl space-y-8 border border-white/10 shadow-2xl">
+            <div class="space-y-3">
+                <span class="text-xs uppercase tracking-[0.25em] text-sky-400 font-semibold">Background &amp; Philosophy</span>
+                <h2 class="editorial-title text-3xl md:text-4xl font-bold text-white">Engineering High-Yield Outbound</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-slate-400 font-light leading-relaxed text-sm md:text-base">
+                <p>
+                    I specialize in bridging the gap between raw web data and high-converting B2B sales pipelines. By bypassing outdated directory scraping methods, I design automated architectures that deliver clean, enriched, and ready-to-deploy lead lists straight to your CRM.
+                </p>
+                <p>
+                    Whether you are scaling a sales agency or executing cold outreach campaigns, my workflows focus on pristine data hygiene, verified phone/email tracking, and custom AI icebreakers built for maximum engagement.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services / Expertise Section -->
     <section id="services" class="py-28 px-6 max-w-7xl mx-auto">
         <div class="text-center space-y-4 mb-20">
-            <span class="text-xs uppercase tracking-widest text-sky-400 font-semibold">Core Capabilities</span>
-            <h2 class="editorial-title text-3xl md:text-5xl font-bold">Engineered for Scale</h2>
+            <span class="text-xs uppercase tracking-[0.25em] text-sky-400 font-semibold">Core Capabilities</span>
+            <h2 class="editorial-title text-3xl md:text-5xl font-bold text-white">Architected for Scale</h2>
         </div>
+
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="glass-panel p-10 rounded-2xl glow-effect transition duration-300 space-y-6">
-                <div class="text-sky-400 font-mono text-sm">01 / EXTRACTION</div>
-                <h3 class="editorial-title text-2xl font-semibold">Google Maps Scraper</h3>
-                <p class="text-slate-400 text-sm leading-relaxed">
+            <!-- Service 1 -->
+            <div class="glass-panel glow-card p-10 rounded-2xl space-y-6">
+                <div class="text-sky-400 font-mono text-xs tracking-widest">01 / EXTRACTION</div>
+                <h3 class="editorial-title text-2xl font-semibold text-white">Google Maps Scraper</h3>
+                <p class="text-slate-400 text-sm font-light leading-relaxed">
                     Extract hyper-targeted local business intelligence including verified names, phone numbers, clean websites, full addresses, and customer ratings.
                 </p>
             </div>
-            <div class="glass-panel p-10 rounded-2xl glow-effect transition duration-300 space-y-6">
-                <div class="text-sky-400 font-mono text-sm">02 / REFINEMENT</div>
-                <h3 class="editorial-title text-2xl font-semibold">Data Enrichment</h3>
-                <p class="text-slate-400 text-sm leading-relaxed">
+
+            <!-- Service 2 -->
+            <div class="glass-panel glow-card p-10 rounded-2xl space-y-6">
+                <div class="text-sky-400 font-mono text-xs tracking-widest">02 / REFINEMENT</div>
+                <h3 class="editorial-title text-2xl font-semibold text-white">Data Enrichment</h3>
+                <p class="text-slate-400 text-sm font-light leading-relaxed">
                     Transform raw, messy web outputs into structured, pristine, and ready-to-deploy CSV datasets optimized for your CRM or outreach tools.
                 </p>
             </div>
-            <div class="glass-panel p-10 rounded-2xl glow-effect transition duration-300 space-y-6">
-                <div class="text-sky-400 font-mono text-sm">03 / AUTOMATION</div>
-                <h3 class="editorial-title text-2xl font-semibold">AI Outbound Hooks</h3>
-                <p class="text-slate-400 text-sm leading-relaxed">
+
+            <!-- Service 3 -->
+            <div class="glass-panel glow-card p-10 rounded-2xl space-y-6">
+                <div class="text-sky-400 font-mono text-xs tracking-widest">03 / AUTOMATION</div>
+                <h3 class="editorial-title text-2xl font-semibold text-white">AI Outbound Hooks</h3>
+                <p class="text-slate-400 text-sm font-light leading-relaxed">
                     Deploy custom AI-driven icebreakers and personalized opening lines tailored to maximize your cold email campaign conversion rates.
                 </p>
             </div>
         </div>
     </section>
 
+    <!-- Contact Section -->
     <section id="contact" class="py-28 px-6 max-w-4xl mx-auto text-center">
-        <div class="glass-panel p-12 md:p-16 rounded-3xl space-y-8 border border-white/10">
-            <span class="text-xs uppercase tracking-widest text-sky-400 font-semibold">Initiate Collaboration</span>
-            <h2 class="editorial-title text-3xl md:text-5xl font-bold">Ready to Upgrade Your Outbound Pipeline?</h2>
-            <p class="text-slate-400 max-w-xl mx-auto text-sm leading-relaxed">
+        <div class="glass-panel p-12 md:p-16 rounded-3xl space-y-8 border border-white/10 shadow-2xl">
+            <span class="text-xs uppercase tracking-[0.25em] text-sky-400 font-semibold">Initiate Collaboration</span>
+            <h2 class="editorial-title text-3xl md:text-5xl font-bold text-white">Ready to Upgrade Your Outbound Pipeline?</h2>
+            <p class="text-slate-400 max-w-xl mx-auto text-sm font-light leading-relaxed">
                 Direct inquiries for custom lead lists, scraper setups, and pipeline automation.
             </p>
+
             <div class="flex flex-col sm:flex-row justify-center items-center gap-6 pt-4 text-sm font-medium">
-                <a href="mailto:bantorresbusiness@gmail.com" class="flex items-center gap-3 px-6 py-3 rounded-xl bg-white/5 border border-white/10 hover:border-sky-400 transition">
+                <a href="mailto:bantorresbusiness@gmail.com" class="flex items-center gap-3 px-6 py-3.5 rounded-xl bg-white/5 border border-white/10 hover:border-sky-400 transition-all duration-300">
                     <span class="text-sky-400">📧</span> bantorresbusiness@gmail.com
                 </a>
-                <a href="tel:7866729254" class="flex items-center gap-3 px-6 py-3 rounded-xl bg-white/5 border border-white/10 hover:border-sky-400 transition">
+                <a href="tel:7866729254" class="flex items-center gap-3 px-6 py-3.5 rounded-xl bg-white/5 border border-white/10 hover:border-sky-400 transition-all duration-300">
                     <span class="text-sky-400">📞</span> 786-672-9254
                 </a>
             </div>
         </div>
     </section>
 
-    <footer class="py-12 border-t border-white/5 text-center text-xs text-slate-500 tracking-widest uppercase">
+    <!-- Footer -->
+    <footer class="py-12 border-t border-white/5 text-center text-xs text-slate-500 tracking-[0.2em] uppercase">
         &copy; 2026 Eli Torres. All Rights Reserved.
     </footer>
 
+    <!-- Mouse Tracking Script -->
+    <script>
+        const glow = document.getElementById('cursor-glow');
+        window.addEventListener('mousemove', (e) => {
+            glow.style.transform = `translate(${e.clientX}px, ${e.clientY}px) translate(-50%, -50%)`;
+        });
+    </script>
 </body>
 </html>

@@ -53,6 +53,7 @@
         <nav class="hidden md:flex space-x-12 text-xs tracking-[0.2em] uppercase font-medium text-slate-400">
             <a href="#about" class="hover:text-white transition-colors duration-200">About</a>
             <a href="#services" class="hover:text-white transition-colors duration-200">Expertise</a>
+            <a href="#sample" class="hover:text-white transition-colors duration-200">Live Sample</a>
             <a href="#stack" class="hover:text-white transition-colors duration-200">Tech Stack</a>
             <a href="#contact" class="hover:text-white transition-colors duration-200">Contact</a>
         </nav>
@@ -80,8 +81,8 @@
             </p>
 
             <div class="flex flex-col sm:flex-row justify-center items-center gap-5 pt-6">
-                <a href="#services" class="w-full sm:w-auto px-8 py-4 bg-sky-500 text-darkBg font-semibold text-sm tracking-wider uppercase rounded-full hover:bg-sky-400 transition-all duration-300 shadow-xl shadow-sky-500/20">
-                    Explore Services
+                <a href="#sample" class="w-full sm:w-auto px-8 py-4 bg-sky-500 text-darkBg font-semibold text-sm tracking-wider uppercase rounded-full hover:bg-sky-400 transition-all duration-300 shadow-xl shadow-sky-500/20">
+                    View Data Sample
                 </a>
                 <a href="#contact" class="w-full sm:w-auto px-8 py-4 border border-white/20 text-white font-semibold text-sm tracking-wider uppercase rounded-full hover:bg-white/10 transition-all duration-300">
                     Get in Touch
@@ -142,7 +143,59 @@
         </div>
     </section>
 
-    <!-- Tech Stack Section (New in Part 2) -->
+    <!-- Live Data Sample Preview Section (New in Part 3) -->
+    <section id="sample" class="py-28 px-6 max-w-6xl mx-auto">
+        <div class="glass-panel p-8 md:p-12 rounded-3xl space-y-8 border border-white/10 shadow-2xl">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                <div class="space-y-2">
+                    <span class="text-xs uppercase tracking-[0.25em] text-sky-400 font-semibold">Live Output Preview</span>
+                    <h2 class="editorial-title text-2xl md:text-3xl font-bold text-white">Sample Scraped B2B Lead List</h2>
+                </div>
+                <span class="px-4 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-mono">
+                    Status: Verified &amp; Cleaned
+                </span>
+            </div>
+
+            <div class="overflow-x-auto border border-white/10 rounded-2xl">
+                <table class="w-full text-left text-sm text-slate-300">
+                    <thead class="bg-darkBg text-xs uppercase font-mono text-slate-400 border-b border-white/10">
+                        <tr>
+                            <th class="px-6 py-4">Company / Business</th>
+                            <th class="px-6 py-4">Category</th>
+                            <th class="px-6 py-4">Phone Number</th>
+                            <th class="px-6 py-4">Website</th>
+                            <th class="px-6 py-4">Rating</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-white/5 font-light">
+                        <tr class="hover:bg-white/[0.02] transition">
+                            <td class="px-6 py-4 font-medium text-white">Apex Logistics Group</td>
+                            <td class="px-6 py-4 text-sky-400 text-xs">Freight &amp; Transport</td>
+                            <td class="px-6 py-4 font-mono text-xs">+1 (305) 555-0192</td>
+                            <td class="px-6 py-4 text-slate-400">apexlogistics.io</td>
+                            <td class="px-6 py-4 text-amber-400">★ 4.9 (128)</td>
+                        </tr>
+                        <tr class="hover:bg-white/[0.02] transition">
+                            <td class="px-6 py-4 font-medium text-white">Summit Commercial Real Estate</td>
+                            <td class="px-6 py-4 text-sky-400 text-xs">Property Management</td>
+                            <td class="px-6 py-4 font-mono text-xs">+1 (786) 555-8421</td>
+                            <td class="px-6 py-4 text-slate-400">summitcre.com</td>
+                            <td class="px-6 py-4 text-amber-400">★ 4.8 (94)</td>
+                        </tr>
+                        <tr class="hover:bg-white/[0.02] transition">
+                            <td class="px-6 py-4 font-medium text-white">Vanguard Digital Media</td>
+                            <td class="px-6 py-4 text-sky-400 text-xs">Marketing Agency</td>
+                            <td class="px-6 py-4 font-mono text-xs">+1 (305) 555-3920</td>
+                            <td class="px-6 py-4 text-slate-400">vanguarddigital.co</td>
+                            <td class="px-6 py-4 text-amber-400">★ 5.0 (215)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Stack Section -->
     <section id="stack" class="py-20 px-6 max-w-5xl mx-auto">
         <div class="glass-panel p-10 rounded-3xl space-y-8 text-center border border-white/10">
             <span class="text-xs uppercase tracking-[0.25em] text-sky-400 font-semibold">Operational Stack</span>
@@ -166,7 +219,6 @@
                 <p class="text-slate-400 text-sm font-light">Direct inquiries or message me directly below.</p>
             </div>
 
-            <!-- Direct Contact Info Badges -->
             <div class="flex flex-col sm:flex-row justify-center items-center gap-5 text-sm font-medium">
                 <a href="mailto:bantorresbusiness@gmail.com" class="flex items-center gap-3 px-6 py-3.5 rounded-xl bg-white/5 border border-white/10 hover:border-sky-400 transition-all duration-300 text-slate-300">
                     <span class="text-sky-400">📧</span> bantorresbusiness@gmail.com
@@ -176,7 +228,6 @@
                 </a>
             </div>
 
-            <!-- Lead Capture Form (Links straight to your email) -->
             <form action="mailto:bantorresbusiness@gmail.com" method="POST" enctype="text/plain" class="space-y-4 pt-6 border-t border-white/10">
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <input type="text" name="name" placeholder="Your Name / Company" required class="w-full bg-darkBg border border-white/10 rounded-xl px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-sky-400 transition">
